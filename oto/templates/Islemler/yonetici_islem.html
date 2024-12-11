@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yönetici İşlem Sayfası</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 1em;
+        }
+        nav {
+            background-color: #333;
+            overflow: hidden;
+        }
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            display: inline-block;
+        }
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        .container {
+            padding: 20px;
+        }
+        h1, h2 {
+            text-align: center;
+            color: #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background-color: white;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        .success-message {
+            text-align: center;
+            color: green;
+            margin-bottom: 20px;
+        }
+        .form-container {
+            text-align: center;
+        }
+        select, input[type="time"], input[type="text"] {
+            width: 20%;
+            padding: 8px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 10px 0;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Yönetici İşlem Sayfası</h1>
+</header>
+
+<nav>
+    <a href="/">Ana Sayfa</a>
+    <a href="/Islemler/yonetici_islem">Yönetici İşlemleri</a>
+</nav>
+
+<div class="container">
+    <h2>Otobüs Sayısı ve Boş Otobüsler</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Saat</th>
+                <th>Katılan Öğrenci Sayısı</th>
+                <th>Gerekli Otobüs Sayısı</th>
+                <th>Boş Otobüs Sayısı</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for otobus in otobus_sayilari %}
+            <tr>
+                <td>{{ otobus.saat }}</td>
+                <td>{{ otobus.katilan_ogrenci }}</td>
+                <td>{{ otobus.otobus_sayisi }}</td>
+                <td>{{ otobus.bos_otobus_sayisi }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+<footer>
+    <p>&copy; 2024 Akıllı Okul Otobüsü Sistemi. Tüm hakları saklıdır.</p>
+</footer>
+
+</body>
+</html>

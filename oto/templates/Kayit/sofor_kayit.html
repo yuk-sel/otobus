@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Şoför Kaydı</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 1em;
+        }
+        nav {
+            background-color: #333;
+            overflow: hidden;
+        }
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            display: inline-block;
+        }
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        .container {
+            padding: 20px;
+            text-align: center;
+        }
+        .register-form {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            margin: 0 auto;
+        }
+        .register-form input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .register-form button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .register-form button:hover {
+            background-color: #45a049;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Şoför Kaydı</h1>
+</header>
+
+<nav>
+    <a href="/">Ana Sayfa</a>
+    <a href="/Giriş/sofor_giris.html">Şoför Girişi</a>
+</nav>
+
+<div class="container">
+    <h2>Kayıt Ol</h2>
+    <div class="register-form">
+        <form action="/Kayit/sofor_kayit" method="POST">
+            <label for="soforID">Şoför ID:</label>
+            <input type="text" id="soforID" name="soforID" required>
+            <label for="sifre">Şifre:</label>
+            <input type="password" id="sifre" name="sifre" required>
+            <label for="email">E-posta:</label>
+            <input type="email" id="email" name="email" required>
+            <button type="submit">Kaydı Tamamla</button>
+        </form>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2024 Akıllı Okul Otobüsü Sistemi. Tüm hakları saklıdır.</p>
+</footer>
+
+</body>
+</html>
